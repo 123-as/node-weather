@@ -11,7 +11,7 @@ const forecast=(lat,long,callback)=>{
         }
         else{
             const data=response.body.current;
-            callback(undefined,data.weather_descriptions[0]+". It is currently "+ data.temperature+" degree.It feel likes "+data.feelslike+" degree.");
+            callback(undefined,data.weather_descriptions[0]+". It is currently "+ data.temperature+" degree and the humidity "+data.humidity+"%.It feel likes "+data.feelslike+" degree.");
         }
     })
 }
