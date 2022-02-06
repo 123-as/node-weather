@@ -25,7 +25,7 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault();
     content.innerHTML="Loading..."
     const location=address.value;
-    fetch(`http://localhost:3000/weather?address=${location}`).then(response=>{
+    fetch(`/weather?address=${location}`).then(response=>{
     response.json().then((response)=>{
         if(response.error){
            content.innerHTML=response.error;

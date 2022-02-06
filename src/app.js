@@ -9,6 +9,9 @@ const  express=require("express");
 //hbs中的partial可以使模板重複使用
 const hbs=require('hbs');
 
+//設置端口號
+const port=process.env.PORT||3000;
+
 //  ..   為上一個資料夾
 console.log(path.join(__filename,".."));
 
@@ -122,6 +125,6 @@ app.get('*',(req,res)=>{
 
 //開啟伺服器監聽
 //第二個參數為回呼函數,運行伺服器時會執行
-app.listen(3000,()=>{
-    console.log("server is running 3000");
+app.listen(port,()=>{
+    console.log("server is running"+port);
 });
